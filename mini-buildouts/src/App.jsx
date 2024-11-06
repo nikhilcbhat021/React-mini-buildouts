@@ -2,24 +2,57 @@ import XFlags from "./mini-projects/Xflags";
 import Stopwatch from "./mini-projects/Stopwatch";
 import { useState, Suspense } from "react";
 
+import { Routes, Route, useNavigate } from 'react-router-dom';
+
 function App() {
+   
   const ProjectsArray = {
     XFlags: <XFlags/>,
     Stopwatch: <Stopwatch/>,
   };
+
+  return (<>
+
+    <Routes>
+      <Route exact path="/" element={<LandingPage ProjectsArray={ProjectsArray}/>}/>
+      {
+        Object.keys(ProjectsArray).map((key) => {
+          console.log(key.toLowerCase());
+          return <Route key={key} path={`/${key.toLowerCase()}`} element={
+            (
+              <div style={{padding: '20px'}}>
+                {ProjectsArray[key]}
+              </div>
+            )
+          }/>
+        })
+      }
+    </Routes>
+  </>)
+}
+
+
+const LandingPage = ({ProjectsArray}) => {
+
+
   const [renderProject, setRenderProject] = useState(<>
     <h1 style={{textAlign:'center'}}>
       Welcome to my projects!
     </h1>
   </>);
 
-  return (
-    <>
+  const navigate = useNavigate();
+
+  return (<>
     <div style={{display: 'flex', gap: '15px', flexWrap: 'wrap', padding: '10px'}}>
       {
         Object.keys(ProjectsArray).map(key => {
           return (
-            <button key={key} onClick={() => setRenderProject(ProjectsArray[key])}>{key}</button>
+            // setRenderProject(ProjectsArray[key])
+            <button 
+              key={key} 
+              onClick={() => navigate(key.toLowerCase())}
+            >{key}</button>
           )
         })  
       }
@@ -32,8 +65,6 @@ function App() {
       </div>
       {renderProject}
     </Suspense>
-    </>
-  )
+  </>)
 }
-
 export default App
