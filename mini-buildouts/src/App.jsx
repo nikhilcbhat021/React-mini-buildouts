@@ -1,14 +1,17 @@
+import { useState, Suspense } from "react";
+import { Routes, Route, useNavigate } from 'react-router-dom';
+
+// buildouts
 import XFlags from "./mini-projects/Xflags";
 import Stopwatch from "./mini-projects/Stopwatch";
-import { useState, Suspense } from "react";
-
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import FullNameDisplayForm from "./mini-projects/Fullnamedisplay";
 
 function App() {
    
   const ProjectsArray = {
     XFlags: <XFlags/>,
     Stopwatch: <Stopwatch/>,
+    FullNameDisplayForm: <FullNameDisplayForm/>,
   };
 
   return (<>
