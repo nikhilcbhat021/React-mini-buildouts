@@ -11,7 +11,7 @@ export default function Stopwatch(props) {
     };
 
     return (<>
-        <h1>StopWatch</h1>
+        <h1>Stopwatch</h1>
         <p>Time: {formatTime(Math.floor(time/100))}</p>
         {
             intervalTracker === -1 ? 
