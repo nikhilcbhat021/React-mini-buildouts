@@ -4,7 +4,7 @@ export default function XFlags() {
     const [countries, setCountries] = useState([]);
 
     useEffect(() => {
-        fetch(`https://xcountries-backend.azurewebsites.net/al`)
+        fetch(`https://xcountries-backend.azurewebsites.net/all`)
             .then(res => res.json())
             .then(ctry => setCountries(ctry))
             .catch(err => console.error(`Error fetching data: ${err}`));
