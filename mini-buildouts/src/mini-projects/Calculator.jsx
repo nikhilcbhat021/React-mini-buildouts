@@ -7,14 +7,16 @@ const Calculator = () => {
     const [result, setResult] = useState("");
     const [expression, setExpression] = useState("");
 
+    useEffect(() => {
+        if (expression === "")
+            setResult("");
+    }, [expression])
+    
     const calculate = (e) => {
         e.preventDefault();
         console.log("calculate")
-        const exec = evaluate(expression);
-        if (isNaN(exec)) {
-            console.error("Nan")
-            setResult("NaN")
-        } else {
+        if (expression!=="") {
+            const exec = evaluate(expression);
             setResult(exec);
             console.log(exec);
         }
@@ -30,6 +32,8 @@ const Calculator = () => {
             setExpression("");
             setResult("");
         } else if (id === '=') {
+            if (expression==="")
+                return;
             // do nothing as of now...
         } else {
             setExpression((e) => e+id);
@@ -39,13 +43,12 @@ const Calculator = () => {
     return <div className="calculator__container">
         <h1>React Calculator</h1>
         <form onSubmit={calculate} id="form">
-            <label htmlFor="expression" className={result==="NaN" ? "enabled" : "disabled"} style={{color:'red'}}>*Invalid Expression...</label>
 
-            <input pattern="^[\d\s\+\-\*\/]+$"
+            <input pattern="^[\d\+\-\*\/]+$"
                 id="expression" name="expression" type="text"
                 value={expression} onChange={e => setExpression(e.target.value)} />
             
-            <p className={result==="NaN"||result==="" ? "disabled" : "enabled"}>{Number(result)}</p>
+            <p className={result==="" ? "disabled" : "enabled"}>{Number(result)}</p>
             
             <div className="calculator__buttons" id="buttons" 
                 onClick={(e) => handleButtonClick(e)}
