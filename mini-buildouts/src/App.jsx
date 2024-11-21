@@ -5,6 +5,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import XFlags from "./mini-projects/Xflags";
 import Stopwatch from "./mini-projects/Stopwatch";
 import FullNameDisplayForm from "./mini-projects/Fullnamedisplay";
+import CounterApp from "./mini-projects/CounterApp";
 
 function App() {
    
@@ -12,6 +13,7 @@ function App() {
     XFlags: <XFlags/>,
     Stopwatch: <Stopwatch/>,
     FullNameDisplayForm: <FullNameDisplayForm/>,
+    CounterApp: <CounterApp/>,
   };
 
   return (<>
