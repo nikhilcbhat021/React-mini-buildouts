@@ -6,6 +6,7 @@ import XFlags from "./mini-projects/Xflags";
 import Stopwatch from "./mini-projects/Stopwatch";
 import FullNameDisplayForm from "./mini-projects/Fullnamedisplay";
 import CounterApp from "./mini-projects/CounterApp";
+import Calculator from "./mini-projects/Calculator";
 
 function App() {
    
@@ -14,6 +15,7 @@ function App() {
     Stopwatch: <Stopwatch/>,
     FullNameDisplayForm: <FullNameDisplayForm/>,
     CounterApp: <CounterApp/>,
+    Calculator: <Calculator/>,
   };
 
   return (<>
