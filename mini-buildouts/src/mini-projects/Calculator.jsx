@@ -7,18 +7,17 @@ const Calculator = () => {
     const [result, setResult] = useState("");
     const [expression, setExpression] = useState("");
 
-    useEffect(() => {
-        if (expression === "")
-            setResult("");
-    }, [expression])
     
     const calculate = (e) => {
         e.preventDefault();
         console.log("calculate")
+        console.error(expression,expression!=="")
         if (expression!=="") {
             const exec = evaluate(expression);
             setResult(exec);
             console.log(exec);
+        } else {
+            setResult("Error");
         }
     }
 
@@ -32,8 +31,6 @@ const Calculator = () => {
             setExpression("");
             setResult("");
         } else if (id === '=') {
-            if (expression==="")
-                return;
             // do nothing as of now...
         } else {
             setExpression((e) => e+id);
@@ -48,7 +45,7 @@ const Calculator = () => {
                 id="expression" name="expression" type="text"
                 value={expression} onChange={e => setExpression(e.target.value)} />
             
-            <p className={result==="" ? "disabled" : "enabled"}>{Number(result)}</p>
+            <p className={result==="" ? "disabled" : "enabled"}>{result}</p>
             
             <div className="calculator__buttons" id="buttons" 
                 onClick={(e) => handleButtonClick(e)}
