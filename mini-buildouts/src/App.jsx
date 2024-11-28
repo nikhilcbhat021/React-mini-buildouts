@@ -8,6 +8,7 @@ import FullNameDisplayForm from "./mini-projects/Fullnamedisplay";
 import CounterApp from "./mini-projects/CounterApp";
 import Calculator from "./mini-projects/Calculator";
 import ClassCounter from './mini-projects/ClassCounter';
+import EmployeePagination from './mini-projects/EmployeePagination';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
     CounterApp: <CounterApp/>,
     Calculator: <Calculator/>,
     ClassCounter: <ClassCounter/>,
+    EmployeePagination: <EmployeePagination/>,
   };
 
   return (<>
