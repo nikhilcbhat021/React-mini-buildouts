@@ -5,8 +5,8 @@ export default function XFlags() {
     const [filterCountry, setFilterCountry] = useState("");
 
     useEffect(() => {
-        // fetch(`https://xcountries-backend.azurewebsites.net/all`)
-        fetch(`https://restcountries.com/v3.1/all`)
+        fetch(`https://xcountries-backend.azurewebsites.net/all`)
+        // fetch(`https://restcountries.com/v3.1/all`)
             .then(res => res.json())
             .then(ctry => setCountries(ctry))
             .catch(err => console.error(`Error fetching data: ${err}`));
@@ -29,14 +29,15 @@ export default function XFlags() {
                         countries.map((c) => {
                             if (filterCountry) {
                                 if ( c.name.common.toLowerCase().includes(filterCountry.toLowerCase()) ) {
-                                    return <Card key={c.name.common} image={c.flags.svg} name={c.name.common} abbr={c.name.common} />
+                                    // return <Card key={c.name.common} image={c.flags.svg} name={c.name.common} abbr={c.name.common} />
+                                    return <Card key={c.abbr} image={c.flag} name={c.name} abbr={c.abbr}/>
                                 }
                             }
                         })
                     ) : (
                         countries.map((c) => {
-                            return <Card key={c.name.common} image={c.flags.svg} name={c.name.common} abbr={c.name.common} />
-                            // return <Card key={c.abbr} image={c.flag} name={c.name} abbr={c.abbr}/>
+                            // return <Card key={c.name.common} image={c.flags.svg} name={c.name.common} abbr={c.name.common} />
+                            return <Card key={c.abbr} image={c.flag} name={c.name} abbr={c.abbr}/>
                         })
                     )
                 }
