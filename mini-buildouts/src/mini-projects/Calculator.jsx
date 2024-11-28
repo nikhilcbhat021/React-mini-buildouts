@@ -7,6 +7,9 @@ const Calculator = () => {
     const [result, setResult] = useState("");
     const [expression, setExpression] = useState("");
 
+    useEffect(() => {
+        console.log("calculator mounted");
+    }, []);
     
     const calculate = (e) => {
         e.preventDefault();

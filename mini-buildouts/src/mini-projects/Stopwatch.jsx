@@ -1,4 +1,4 @@
-import { useState  } from "react";
+import { useState, useEffect } from "react";
 
 export default function Stopwatch(props) {
     const [time, setTime] = useState(0);
@@ -9,6 +9,10 @@ export default function Stopwatch(props) {
         const remainingSeconds = seconds % 60;
         return `${minutes}:${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}`;
     };
+
+    useEffect(() => {
+        console.log("stopwatch mounted");
+    }, [])
 
     return (<>
         <h1>Stopwatch</h1>

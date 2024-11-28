@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function FullNameDisplayForm(props) {
     const [firstName, setFirstName] = useState("");
@@ -12,6 +12,10 @@ export default function FullNameDisplayForm(props) {
         // console.log([...formdata.values()]);
         setNameAvailable(true);
     }
+
+    useEffect(() => {
+        console.log("fullnamedisplay mounted");
+    }, [])
 
     return(<>
         <h1>Full Name Display</h1>

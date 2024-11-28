@@ -16,29 +16,32 @@ export default function XFlags() {
         <h1 style={{textAlign: 'center'}}>XFlags</h1>
         <hr />
         <input style={{height: '2rem', width: '75%', border: '1px solid lightslategray'}} placeholder="Search for countries" type="text" id="text" value={filterCountry} onChange={e => setFilterCountry(e.target.value)}/>
-        <div style={{
-            display:'grid', 
-            gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))', 
-            gap:'1rem', 
-            paddingTop:'20px'
-        }}>
-            {
-                filterCountry !== '' ? (
-                    countries.map((c) => {
-                        if (filterCountry) {
-                            if ( c.name.common.toLowerCase().includes(filterCountry.toLowerCase()) ) {
-                                return <Card key={c.name.common} image={c.flags.svg} name={c.name.common} abbr={c.name.common} />
+        {countries.length === 0 ? 
+            (<div style={{display:'block'}} className="countryCard"> <h1> Loading...</h1> </div>) : 
+            (<div style={{
+                display:'grid', 
+                gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))', 
+                gap:'1rem', 
+                paddingTop:'20px'
+            }}>
+                {
+                    filterCountry !== '' ? (
+                        countries.map((c) => {
+                            if (filterCountry) {
+                                if ( c.name.common.toLowerCase().includes(filterCountry.toLowerCase()) ) {
+                                    return <Card key={c.name.common} image={c.flags.svg} name={c.name.common} abbr={c.name.common} />
+                                }
                             }
-                        }
-                    })
-                ) : (
-                    countries.map((c) => {
-                        return <Card key={c.name.common} image={c.flags.svg} name={c.name.common} abbr={c.name.common} />
-                        // return <Card key={c.abbr} image={c.flag} name={c.name} abbr={c.abbr}/>
-                    })
-                )
-            }
-        </div>
+                        })
+                    ) : (
+                        countries.map((c) => {
+                            return <Card key={c.name.common} image={c.flags.svg} name={c.name.common} abbr={c.name.common} />
+                            // return <Card key={c.abbr} image={c.flag} name={c.name} abbr={c.abbr}/>
+                        })
+                    )
+                }
+            </div>
+        )}
     </>)
 }
 
