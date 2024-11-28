@@ -20,7 +20,7 @@ const EmployeePagination = () => {
                 seTotalPages(Math.ceil(entries.length/perPageCount));
                 setFilteredEntries(entries.slice(currPage*perPageCount, (currPage+1)*perPageCount))
             })
-            .catch(err => console.error(`failed to fetch data : ${err}`))
+            .catch(err => {console.error(`failed to fetch data : ${err}`); alert('failed to fetch data')})
     }, []);
 
     useEffect(() => {
