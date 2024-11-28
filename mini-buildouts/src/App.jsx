@@ -7,15 +7,17 @@ import Stopwatch from "./mini-projects/Stopwatch";
 import FullNameDisplayForm from "./mini-projects/Fullnamedisplay";
 import CounterApp from "./mini-projects/CounterApp";
 import Calculator from "./mini-projects/Calculator";
+import ClassCounter from './mini-projects/ClassCounter';
 
 function App() {
-   
+
   const ProjectsArray = {
     XFlags: <XFlags/>,
     Stopwatch: <Stopwatch/>,
     FullNameDisplayForm: <FullNameDisplayForm/>,
     CounterApp: <CounterApp/>,
     Calculator: <Calculator/>,
+    ClassCounter: <ClassCounter/>,
   };
 
   return (<>
