@@ -9,7 +9,7 @@ const XLogin = () => {
     const handleLogin = (e) => {
         e.preventDefault();
 
-        if (username === 'Crio' && password === 'password') {
+        if (username === 'user' && password === 'password') {
             setIsUserValid('success')
         } else {
             setIsUserValid('failure')
