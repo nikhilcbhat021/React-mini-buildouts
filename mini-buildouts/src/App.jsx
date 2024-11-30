@@ -9,6 +9,7 @@ import CounterApp from "./mini-projects/CounterApp";
 import Calculator from "./mini-projects/Calculator";
 import ClassCounter from './mini-projects/ClassCounter';
 import EmployeePagination from './mini-projects/EmployeePagination';
+import XLogin from "./mini-projects/XLogin";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
     Calculator: <Calculator/>,
     ClassCounter: <ClassCounter/>,
     EmployeePagination: <EmployeePagination/>,
+    XLogin: <XLogin/>,
   };
 
   return (<>
