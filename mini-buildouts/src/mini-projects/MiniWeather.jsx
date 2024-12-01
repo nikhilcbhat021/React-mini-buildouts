@@ -19,7 +19,7 @@ const WeatherCardGrid = ({city}) => {
     useEffect(() => {
         if (city) {
             setLoading(true);
-            fetch(`http://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&aqi=${aqi}`)
+            fetch(`https://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&aqi=${aqi}`)
                 .then(raw => {
                     return raw.json();
                 })
@@ -63,15 +63,6 @@ const SearchBar = ({setCity}) => {
 
 const MiniWeather = () => {
     const [city, setCity] = useState("");
-
-    const handleSearchCity = () => {
-        if (city) {
-            fetch(`http://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&aqi=${aqi}`)
-                .then(raw => raw.json())
-                .then(body => {console.log(body); setWeather(body)})
-                .catch(err => {console.error(`Error occured in weather api - ${err}`); alert('Failed to fetch weather data')})
-        }
-    }
 
     return <div>
         <SearchBar setCity={setCity} />
