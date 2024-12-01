@@ -6,7 +6,7 @@ const key = `32c7301e351c4b68931161402243011`;
 const aqi = `no`;
 
 const WeatherCard = ({title, data}) => {
-    return <div className="weather-cards">
+    return <div className="weather-card">
         <strong>{title}</strong>
         <p>{data}</p>
     </div>
