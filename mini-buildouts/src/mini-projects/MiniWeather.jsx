@@ -6,7 +6,7 @@ const key = `32c7301e351c4b68931161402243011`;
 const aqi = `no`;
 
 const WeatherCard = ({title, data}) => {
-    return <div className="weathercard">
+    return <div className="weather-cards">
         <strong>{title}</strong>
         <p>{data}</p>
     </div>
@@ -35,7 +35,7 @@ const WeatherCardGrid = ({city}) => {
         }
     }, [city])
 
-    return <div className="weathercard-grid">
+    return <div className="weather-cards">
         {
             loading ? <p style={{color: 'gray'}}>Loading data...</p> : (
                 weather && <>

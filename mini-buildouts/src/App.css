@@ -53,7 +53,7 @@
   
 }
 
-.weathercard {
+.weather-card {
   background-color: whitesmoke;
   /* border: 1px solid #222; */
   border-radius: 10px;
@@ -67,7 +67,7 @@
   align-items: center;
 }
 
-.weathercard-grid {
+.weather-cards {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
