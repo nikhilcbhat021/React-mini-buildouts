@@ -52,3 +52,28 @@
 .pagination {
   
 }
+
+.weathercard {
+  background-color: whitesmoke;
+  /* border: 1px solid #222; */
+  border-radius: 10px;
+  font-size: 1.5rem;
+  box-shadow: darkgray;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 10px;
+  align-items: center;
+}
+
+.weathercard-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

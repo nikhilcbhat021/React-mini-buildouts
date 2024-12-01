@@ -10,6 +10,7 @@ import Calculator from "./mini-projects/Calculator";
 import ClassCounter from './mini-projects/ClassCounter';
 import EmployeePagination from './mini-projects/EmployeePagination';
 import XLogin from "./mini-projects/XLogin";
+import MiniWeather from './mini-projects/MiniWeather';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
     ClassCounter: <ClassCounter/>,
     EmployeePagination: <EmployeePagination/>,
     XLogin: <XLogin/>,
+    MiniWeather: <MiniWeather/>,
   };
 
   return (<>
