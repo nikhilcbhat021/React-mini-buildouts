@@ -11,6 +11,8 @@ import ClassCounter from './mini-projects/ClassCounter';
 import EmployeePagination from './mini-projects/EmployeePagination';
 import XLogin from "./mini-projects/XLogin";
 import MiniWeather from './mini-projects/MiniWeather';
+import DictSpellCheck from './mini-projects/DictSpellCheck';
+import XStates from './mini-projects/XStates';
 
 function App() {
 
@@ -24,6 +26,8 @@ function App() {
     EmployeePagination: <EmployeePagination/>,
     XLogin: <XLogin/>,
     MiniWeather: <MiniWeather/>,
+    DictSpellCheck: <DictSpellCheck/>,
+    XStates: <XStates/>,
   };
 
   return (<>
