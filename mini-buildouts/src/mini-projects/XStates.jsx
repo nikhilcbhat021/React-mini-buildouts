@@ -108,7 +108,7 @@ const XStates = () => {
             </select>
         </div>
         <div style={city ? {display: 'block'} : {display: ' none'}}>
-            <p> You selected <strong>{country}</strong>, {state}, {city} </p>
+            <p> You selected <strong>{city}</strong>, {state}, {country} </p>
         </div>
     </>);
 };
