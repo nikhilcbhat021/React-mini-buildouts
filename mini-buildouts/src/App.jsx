@@ -13,6 +13,7 @@ import XLogin from "./mini-projects/XLogin";
 import MiniWeather from './mini-projects/MiniWeather';
 import DictSpellCheck from './mini-projects/DictSpellCheck';
 import XStates from './mini-projects/XStates';
+import XDictionary from "./mini-projects/XDictionary";
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
     MiniWeather: <MiniWeather/>,
     DictSpellCheck: <DictSpellCheck/>,
     XStates: <XStates/>,
+    XDictionary: <XDictionary />,
   };
 
   return (<>
