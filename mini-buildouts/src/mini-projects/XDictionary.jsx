@@ -29,10 +29,11 @@ const XDictionary = () => {
             <input type="text" placeholder="Search for a word..." value={search} onChange={(e) => setSearch(e.target.value)} />
             <button onClick={() => searchInDict(search)}>Search</button>
             <h3 style={{textAlign:"start"}}>Definition:</h3>
+            {/* { definition !== "" && */}
+                <p>{definition}</p>
+            {/* } */}
         </div>
-        { definition !== "" &&
-            <p>{definition}</p>
-        }
+        
     </div>
 }
 
