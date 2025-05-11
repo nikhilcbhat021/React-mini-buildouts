@@ -14,6 +14,7 @@ import MiniWeather from './mini-projects/MiniWeather';
 import DictSpellCheck from './mini-projects/DictSpellCheck';
 import XStates from './mini-projects/XStates';
 import XDictionary from "./mini-projects/XDictionary";
+import XTables from "./mini-projects/XTables";
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
     DictSpellCheck: <DictSpellCheck/>,
     XStates: <XStates/>,
     XDictionary: <XDictionary />,
+    XTables: <XTables/>,
   };
 
   return (<>
