@@ -49,6 +49,8 @@ const ModalForm = () => {
             setErrorInput("");
             for(let [key, val] of formelements)
                 console.log(key, val);
+            e.target.reset();
+            // e.target.
         }
     }
 
