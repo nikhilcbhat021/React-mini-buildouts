@@ -95,3 +95,89 @@ td {
 .btn_xtables:hover {
     cursor: pointer;
 }
+
+/**** Modal ****/
+
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(7px);
+
+    /* positioning & centering */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    z-index: 1;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease-in;
+    /* transform: translate(-50%, -50%); */
+}
+
+.modal {
+    /* outline: auto; */
+    background-color: aliceblue;
+
+    width: 80%;
+    max-width: 700px;
+    /* height: fit-content; */
+
+    background-color: rgb(246, 246, 228);
+    /* position: relative; */
+    /* z-index: 2000; */
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+}
+
+.modal-content {
+    height: 100%;
+    width: 100%;
+}
+
+.formElement {
+    width: 100%;
+    padding: .5rem 0;
+    display: flex;
+    font-size: 1rem;
+    flex-direction: column;
+}
+
+.formElement > label {
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+
+.formElement > input {
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    border: 1px solid gray;
+}
+
+.modal-btn {
+    padding: .5rem 1rem;
+    align-self: center;
+    border-radius: 999999px;
+    border: transparent;
+    background-color: blueviolet;
+    cursor: pointer;
+    color: white;
+    font-size: 1rem
+}
+
+.modal-input-error {
+    color: rgb(244, 42, 42);
+    font-size: 1.6rem;
+    margin-top: 6px;
+    align-self: start;
+    margin-left: 2rem;
+}

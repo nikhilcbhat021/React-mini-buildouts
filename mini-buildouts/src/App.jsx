@@ -15,6 +15,7 @@ import DictSpellCheck from './mini-projects/DictSpellCheck';
 import XStates from './mini-projects/XStates';
 import XDictionary from "./mini-projects/XDictionary";
 import XTables from "./mini-projects/XTables";
+import XModals from "./mini-projects/XModals";
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
     XStates: <XStates/>,
     XDictionary: <XDictionary />,
     XTables: <XTables/>,
+    XModals: <XModals/>
   };
 
   return (<>
